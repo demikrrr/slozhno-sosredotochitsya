@@ -1,13 +1,14 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
-  --bg-color: #000028;
+  --decorated-element-color: #FF0070;
+  --header-menu-color: #FF0070;
   --text-color-basic: #F1B2CE;
-  --text-color-titles: #000028;
+  --text-color-titles: #DB00FF;
+  --color_shadows: #FF0070;
+  --questions-color: #FF0070;
+  --accent-color: #FF0070;
+  --border_opacity: rgba(255, 0, 112, 0.4);
   --text-color-questions: #FF0070;
+  --text-color-answers: #000028;
   --main-font: 'IBM Plex mono';
   --font-size-basic: 18px;
-  --font-size-titles: 116px;
 }
