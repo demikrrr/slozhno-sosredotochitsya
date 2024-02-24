@@ -17,7 +17,7 @@
   grid-auto-rows: 1fr min-content 1fr;
   justify-items: start;
   align-items: center;
-  padding: 2.6vi;
+  padding: 10px;
 }
 
 .header__theme-menu {
@@ -51,7 +51,6 @@
 }
 
 .header_text {
-  justify-self: end;
   width: 100%;
   padding-inline-end: 8vi;
 }
@@ -70,8 +69,8 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  inset-block-start: 2.6vi;
-  inset-inline-end: 2.6vi;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
   height: 25px;
   width: 25px;
   border-top: 1px solid var(--decorated-element-color);
@@ -81,8 +80,8 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  inset-block-end: 2.6vi;
-  inset-inline-start: 2.6vi;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
   height: 25px;
   width: 25px;
   border-bottom: 1px solid var(--decorated-element-color);
@@ -94,8 +93,8 @@
   color: var(--accent-color);
   size: var(--font-size-basic, 18px);
   font-size: var(--font-size-basic, 18px);
-  inset-block-start: 2.6vi;
-  inset-inline-end: calc(2.6vi + 25px + 3px)
+  inset-block-start: 10px;
+  inset-inline-end: 38px;
 }
 
 .decoration_element::after {
@@ -111,10 +110,10 @@
 }
 
 .content {
-  margin-block-start: 6vb;
-  margin-block-end: 6vb;
-  padding-inline-start: 2.6vi;
-  padding-inline-end: 2.6vi;
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
 }
 
 .questions {
@@ -131,21 +130,21 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  margin-block-end: 7.5vb;
+  margin-block-end: 50px;
 }
 
 .low_concentration {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  margin-block-end: 7.5vb;
+  margin-block-end: 50px;
 }
 
 .high_concentration {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  margin-block-end: 7.5vb;
+  margin-block-end: 50px;
 }
 
 .answers {
@@ -166,24 +165,24 @@
   gap: 10px;
 }
 
-.picture {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-
 .pictures {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
+.picture {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
 .footer {
   height: 100vh;
   display: grid;
-  justify-items: start;
+  justify-items: center;
   align-items: center;
-  padding: 2.6vi;
+  padding: 10px;
 }
 
 .footer_title {
@@ -226,11 +225,160 @@ button:hover {
 }
 
 @media (width >= 768px) {
+  
   .header {
     padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
     }
 
-  
+  .header__theme-menu {
+    grid-column: 1 / span 2;
   }
 
-/*grid-template-columns: minmax(236px, calc(1 / 3 * (100% - 40px))) auto;*/
+  .header_title {
+    grid-column: 1 / span 2;
+    position: relative;
+    inset-inline-start: -20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header_text {
+    grid-column: 2;
+  }
+
+  .content {
+    margin-block-start: 60px;
+    margin-block-end: 60px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+
+  .why_difficalt {
+    grid-template-columns: repeat(3, 1fr);
+    margin-block-end: 80px;
+  }
+
+  .why_difficalt .questions {
+    grid-column: 1 / span 1;
+  }
+
+  .why_difficalt .answers {
+    grid-column: 2 / span 2;
+    padding-inline-end: 5px;
+  }
+
+  .low_concentration {
+    margin-block-end: 80px;
+  }
+
+  .low_concentration .questions {
+    display: inline-block;
+    width: 236px;
+  }
+
+  .high_concentration {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-block-end: 80px;
+  }
+
+  .high_concentration .questions {
+    grid-column: 1 / span 1;
+  }
+
+  .high_concentration .answers {
+    grid-column: 2 / span 2;
+    padding-inline-end: 5px;
+  }
+
+  .gallary {
+    gap: 20px;
+  }
+
+  .pictures {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+  }
+
+  .sunset {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .dessert {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .cassete {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+  }
+
+  .books {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .street {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+  }
+
+  .picture {
+    height: 100%;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decoration_element {
+    inset-block-start: 20px;
+    inset-inline-end: 48px;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header_text {
+    padding-inline-end: 0;
+  }
+
+  .why_difficalt .answers {
+    padding-inline-end: 0;
+  }
+
+  .low_concentration .questions {
+    width: 315px;
+  }
+
+  .low_concentration .answers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
