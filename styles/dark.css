@@ -1,4 +1,6 @@
 .page.theme_dark {
+  --background-image: url(../images/cover-image-dark.png);
+  --decoration-element_display: block;
   --decorated-element-color: #FF0070;
   --header-menu-color: #FF0070;
   --text-color-basic: #F1B2CE;

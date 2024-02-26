@@ -1,6 +1,9 @@
 :root {
+  --background-image: url(../images/cover-image-dark.png);
+  --decoration-element_display: block;
   --decorated-element-color: #FF0070;
   --header-menu-color: #FF0070;
+  --header_footer-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --text-color-basic: #F1B2CE;
   --text-color-titles: #DB00FF;
   --color_shadows: #FF0070;
